@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex, noarchive, nofollow" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Erik Grinn</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <header>
+        <h1>Erik Grinn</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Web Development Concepts</h2>
+            <nav class="local">
+                <a href="#webServers">Web Servers</a>
+                <a href="#frontendDesign">Frontend Design</a>
+                <a href="#images">Optimizing Images</a>
+                <a href="#favicons">Favicons</a>
+            </nav>
+            <article id="webServers">
+                <h3>Web Servers</h3>
+                <p>
+                    <!-- Explain the concept of a designated home page and how its name relates to different servers and languages. -->
+                    A designated <strong>homepage</strong> is what is referred to as the file in the root directory that is
+                    referenced as the default file to return whenever a GET request is initiated for the "/" request on a web-server.
+                    The "/" request is typically mapped to the file name "/index.html". The Apache web-server, which OSU Engineering uses for their server software,
+                    uses this standard.   
+                </p>
+                <p>
+                    <!-- Explain what can be seen in the browser's Web Dev/Inspector Network tab output screen (use the concepts provided in the Exploration). What is different about the file's details when viewed from the web server versus the local computer? -->
+                    The <strong>Web Dev/Inspector Network tab</strong> provides useful insights into how the web page is accessed and retrieved.
+                    The <strong>status code</strong> upon inspection of the file for both local and web-server access has a value of 200. 
+                    Codes ranging from 200-299 indicate successful responses, and the code of 200 specifically indicates that the response body has all the necessary information.
+                    The <strong>request methods</strong> between both local and server-side access can be seen as "GET". This indicates that we are requesting to receive the data from the source, be it local or from the web server.
+                    The <strong>types</strong> displayed for both local and server-side files display a content type of "text/html". This indicates that the content received is simple text with HTML language.
+                    The <strong>URL (Uniform Resource Locator)</strong> for the local file is, as expected, different from that of the server-side's URL. The local URL is the path to the local file on the machine. For example, my Macbook machine starts with "/users" and ends with the "/M4/a4-grinne/index.html".
+                    The URL from the web-server is much different and instead starts with "web.engr.oregonstate.edu", which is the OSU web server website that hosts a student's site.
+                    The <strong>ports</strong> also differ between local and server-side inspection. On the local side, there is no port because we are not accessing information from the internet. On the server-side, the port is indicated as 443, which is the standard port for web pages that are encrypted with HTTPS.
+                    The <strong>favicon</strong> name is only present when inspecting the web-server file, and represents the logo/icon that this OSU server automatically provides. 
+                </p>
+                <p>
+                    <!-- Explain why the favicon.ico file has a status 200, but the main.css and main.js files have a status 404 (or 400, if that is what you see). -->
+                    The <strong>favicon.ico</strong> file has a status of 200 because the file is automatically provided within this OSU web-server. The main.css and main.js files have a status code of 404 because although these are referenced in the HTML code, the web-server does not provide these services.
+                </p>
+                <p>
+                    <!-- Explain the parts of your web server's URL. What are the scheme, the subdomains, the host domain, and the resources? -->
+                    The <strong>URL</strong> of an internet address contains several parts. We will go through each part of the URL where this file resides, at https://web.engr.oregonstate.edu/~grinne/a4-grinne/.
+                    The <strong>scheme</strong> is the protocol the web client uses to request the resource. For this file, it is HTTPS.
+                    The <strong>server name (domain)</strong> is the name of the machine where the IP address of the file is hosted. In this case it is "oregonstate.edu".
+                    The <strong>subdomain</strong> is the prefix to the domain name and is a subsection of that domain. Here, it is "web.engr".
+                    The <strong>port on the server</strong> is the port on the machine where the data is transmitted. The standard port number for HTTPS is 443, and so it is omitted from the URL.
+                    The <strong>path to resource</strong> is the path from the server to the requested destination/file. In this case, it is "~grinne/a4-grinne/". Note the final "/", which is mapped to "index.html" as mentioned when discussing homepages.
+                    The <strong>item on the page (or fragment)</strong> is not present in this URL. If present, this would indicate the part of the page to locate (or scroll to) and display.
+                    <strong>Query parameters</strong> are also not present within the URL, as we are not requesting specified filtering of additional data.
+                </p>
+            </article>
+            <article id="frontendDesign">
+                <h3>Frontend Design</h3>
+                <p>
+                    <strong>Frontend design</strong> involves creating an appropriate user interface and experience on the web. It includes designing appropriate visuals on the page, the graphical user-interface (GUI),
+                     and the overall interactive experience. Visual design should have a consistent color scheme, font and typography scheme, a photography, icon, and illustration scheme, and navigation systems that make sense.
+                </p>
+                <dl>
+                    <dt><strong>Effectiveness</strong></dt>
+                    <dd>Effectiveness is the measure of the degree to which a user can successfully achieve their goals on the website.</dd>
+                    <dt><strong>Efficiency</strong></dt>
+                    <dd>Efficiency measures how quickly the user can complete tasks on the website, ideally with the least number of steps.</dd>
+                    <dt><strong>Ease of Navigation</strong></dt>
+                    <dd>Intuitability is the measure of how easily new users can intuit the function and navigation of the website.</dd>
+                    <dt><strong>Error-free</strong></dt>
+                    <dd>The website should be polished as much as possible to avoid commonplace errors.</dd>
+                    <dt><strong>Enjoyability/Engagement</strong></dt>
+                    <dd>Enjoyability and engagement is the overall measure of how well the website works, and the satisfaction of the overall experience.</dd>
+                </dl>
+                <p><strong>Page Layout Tags:</strong> The <strong>&lt;header&gt;</strong> tag is used as the banner of the site, and is typically the same across pages/links.
+                     The <strong>&lt;main&gt;</strong> tag holds the primary content of the webpage.
+                     The <strong>&lt;section&gt;</strong> tag defines sections, and can be used to group content together.
+                     The <strong>&lt;article&gt;</strong> tag is usually used within a section, and holds a specific topic within that section.
+                     The <strong>&lt;footer&gt;</strong> tag is placed after the closing main tag and contain legal/contact information, and links to important pages. 
+                     The <strong>&lt;nav&gt;</strong> tag defines a set of navigation links to different pages.</p>
+                <ol>
+                    <li><strong>External links</strong>: Anchors link to an external URL using the 'href' attribute. For example: <a href="https://developer.mozilla.org/en-US/">MDN's Developer Website</a></li>
+                    <li><strong>Internal links</strong>: Anchors link to internal content from one text item to another text item within the same page, by using IDs. For example: <a href="#webServers">Go to the Web Server</a></li>
+                    <li><strong>Page-to-page links</strong>: Anchors link to other pages within the same website using a relative URL. For example: <a href="contact.html">Contact</a></li>
+                </ol>
+            </article>
+            <article id="images">
+                <h3>Optimizing Images</h3>
+                <p>
+                    <dl>
+                        <dt><strong>File Name</strong></dt>
+                        <dd>The file name should be descriptive so that search engine optimization (SEO) can be utilized to identify the file across the web.</dd>
+                        <dt><strong>File Size</strong></dt>
+                        <dd>File sizes should be made as small as possible so that loading times are quick and seamless. Proprietary software usually has varioius techniques to resize images appropriately.</dd>
+                        <dt><strong>Exact Dimensions</strong></dt>
+                        <dd>Reducing and cropping the size of images to alignw witht the spacing of the webpages is good practice.</dd>
+                        <dt><strong>File Format</strong></dt>
+                        <dd>Images can natively be several formats. On the web, JPG is the standard photo format for best processing. Line-art images are usually GIF, PNG, or SVG, and other specialized graphics should be PNG.</dd>
+                        <dt><strong>Resolution</strong></dt>
+                        <dd>Monitors have varying levels of pixels per inch (ppi) that they can render, typically from 72 to 300+ ppi. As 72 ppi is the default, it is recommended to provide images of at least that size.</dd>
+                        <dt><strong>Color Mode</strong></dt>
+                        <dd>RGB color mode is used with PNG, JPG, SVG, and WebP file types, while Indexed is used for GIF.</dd>
+                    </dl>
+                </p>
+            </article>
+            <article id="favicons">
+                <h3>Favicons</h3>
+                <p>
+                    Favicons can be thought of as logos that represent the company, app, or general brand being displayed. They can be GIF, PNG, ICO, or SVG file formats. 
+                    The favicon symbol image is tested as different file formats so that it works on multiple browsers/devices. Then, when the browser has access to the symbol, it will use that symbol in places such as a tab, app logo, search engine results, bookmarks, etc.
+                    Modern techniques to accomodate several devices have a higher quality favicon and a lower quality one, so that the appropriate image can be used in places that will allow each. For example, a high quality favicon should be used with an app logo, while a lower quality favicon could be present in the browser tab.
+                </p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Erik Grinn</p>
+    </footer>
+</body>
+</html>
